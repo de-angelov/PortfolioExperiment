@@ -14,6 +14,11 @@ export default new Router({
       component: Home
     },
     {
+      path: "/cv",
+      name: "cv",
+      component: () => import("./views/Cv.vue")
+    },
+    {
       path: "/about",
       name: "about",
       // route level code-splitting

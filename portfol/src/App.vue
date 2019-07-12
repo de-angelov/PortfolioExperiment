@@ -6,17 +6,21 @@
       <router-link to="/about">About me</router-link>
     </div>
     <router-view />
+    <Background />
   </div>
 </template>
 <script lang="ts">
+// import { Component, Vue } from "vue-property-decorator";
+import Component from "vue-class-component";
 import "./style/main.scss";
-import { Component, Vue } from "vue-property-decorator";
-// import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Background from "@/components/Background.vue";
+import Vue from "vue";
+import VueAnime from "vue-animejs";
+
+Vue.use(VueAnime);
 
 @Component({
-  components: {
-    // HelloWorld,
-  }
+  components: { Background }
 })
 export default class App extends Vue {}
 </script>

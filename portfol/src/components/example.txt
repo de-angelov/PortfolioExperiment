@@ -1,0 +1,38 @@
+export default {
+  //scoped variables in this component
+  
+data () {
+    return {
+      message: 'Hello'
+    }
+  },
+  // observed variables (by function)
+  
+computed: {
+    reversedMessage () {
+      return this.message.split('').reverse().join('')
+    }
+  },
+  // functions firing by template
+  
+methods: {
+    changeMessage () {
+      this.message = "Good bye"
+    }
+  },
+  // child components this component calls
+  
+components: { },  // variables passed from parent template
+  
+props: { },
+
+  // Lifecycle hooks
+  
+created () { },
+  
+mounted () { },
+  
+updated () { },
+  
+destroyed () { }
+}
